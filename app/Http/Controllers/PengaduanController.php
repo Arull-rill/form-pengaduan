@@ -29,8 +29,10 @@ class PengaduanController extends Controller
 
         Pengaduan::create([
             'user_id' => Auth::id(),
-            'judul' => $request->judul,
-            'isi' => $request->isi,
+            'nama' => $request->nama,
+            'kelas' => $request->kelas,
+            'kategori' => $request->kategori,
+            'isi_pengaduan' => $request->isi_pengaduan,
         ]);
 
         return redirect('/dashboard')->with('success', 'Pengaduan berhasil dikirim');

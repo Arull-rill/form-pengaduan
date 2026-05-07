@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pengaduans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('nama');
             $table->string('kelas');
             $table->string('kategori');

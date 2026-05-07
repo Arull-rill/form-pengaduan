@@ -12,10 +12,14 @@ class Pengaduan extends Model
     protected $fillable = [
         'user_id',
         'judul',
-        'isi',
+        'nama',
+        'kelas',
+        'kategori',
+        'isi_pengaduan',
         'foto',
         'status',
     ];
+
 
     public function user()
     {
